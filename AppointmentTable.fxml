@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.AppointmentTableController">
+   <children>
+      <TableView fx:id="appointmentTable" prefHeight="623.0" prefWidth="1000.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" minWidth="125.0" prefWidth="125.0" text="Appointment ID" />
+          <TableColumn fx:id="titleCol" minWidth="125.0" prefWidth="125.0" text="Title" />
+            <TableColumn fx:id="descriptionCol" minWidth="125.0" prefWidth="125.0" text="Description" />
+            <TableColumn fx:id="locationCol" minWidth="125.0" prefWidth="125.0" text="Location" />
+            <TableColumn fx:id="contactCol" minWidth="125.0" prefWidth="125.0" text="Contact" />
+            <TableColumn fx:id="urlCol" minWidth="125.0" prefWidth="125.0" text="URL" />
+            <TableColumn fx:id="startCol" minWidth="125.0" prefWidth="125.0" text="Start" />
+            <TableColumn fx:id="endCol" minWidth="125.0" prefWidth="125.0" text="End" />
+        </columns>
+      </TableView>
+      <Button fx:id="editApptBtn" layoutX="14.0" layoutY="655.0" mnemonicParsing="false" onAction="#editApptButtonListener" text="Edit Appointment" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+   </children>
+</AnchorPane>

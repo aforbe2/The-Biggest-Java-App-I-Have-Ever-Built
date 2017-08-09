@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.ConsultantScheduleReportController">
+   <children>
+      <TableView fx:id="scheduleTable" layoutX="14.0" layoutY="14.0" prefHeight="360.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" minWidth="100.0" prefWidth="100.0" text="ID:" />
+          <TableColumn fx:id="titleCol" minWidth="100.0" prefWidth="100.0" text="Title:" />
+            <TableColumn fx:id="descriptionCol" minWidth="100.0" prefWidth="100.0" text="Description:" />
+            <TableColumn fx:id="locationCol" minWidth="100.0" prefWidth="100.0" text="Location:" />
+            <TableColumn fx:id="startCol" minWidth="100.0" prefWidth="100.0" text="Start:" />
+            <TableColumn fx:id="endCol" minWidth="100.0" prefWidth="100.0" text="End:" />
+        </columns>
+      </TableView>
+      <Label layoutX="37.0" layoutY="14.0" text="Here are all the appointments you have scheduled:" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

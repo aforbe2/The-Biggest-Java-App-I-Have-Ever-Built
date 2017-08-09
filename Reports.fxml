@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.ReportsController">
+   <children>
+      <Label layoutX="257.0" layoutY="14.0" text="Reports:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="81.0" text="Appointment Types by Month:" />
+      <Label layoutX="115.0" layoutY="179.0" text="Consultant Schedule:" />
+      <Label layoutX="115.0" layoutY="280.0" text="Current User Roster:" />
+      <Button fx:id="typeBtn" layoutX="418.0" layoutY="76.0" mnemonicParsing="false" onAction="#typeByMonthListener" text="View Report" />
+      <Button fx:id="consultantBtn" layoutX="418.0" layoutY="174.0" mnemonicParsing="false" onAction="#consultantScheduleListener" text="View Report" />
+      <Button fx:id="rosterBtn" layoutX="418.0" layoutY="275.0" mnemonicParsing="false" onAction="#employeeRosterListener" text="View Report" />
+   </children>
+</AnchorPane>

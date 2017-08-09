@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.CalendarWeekController">
+   <children>
+      <Label layoutX="394.0" layoutY="48.0" text="Calendar - Week:">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="calendarWeekTable" layoutX="150.0" layoutY="101.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" minWidth="111.0" prefWidth="111.0" text="ID:" />
+          <TableColumn fx:id="customerIdCol" minWidth="111.0" prefWidth="111.0" text="Customer ID:" />
+            <TableColumn fx:id="titleCol" minWidth="111.0" prefWidth="111.0" text="Title:" />
+            <TableColumn fx:id="descriptionCol" minWidth="111.0" prefWidth="111.0" text="Description:" />
+            <TableColumn fx:id="locationCol" minWidth="111.0" prefWidth="111.0" text="Location:" />
+            <TableColumn fx:id="contactCol" minWidth="111.0" prefWidth="111.0" text="Contact:" />
+            <TableColumn fx:id="urlCol" minWidth="111.0" prefWidth="111.0" text="URL:" />
+            <TableColumn fx:id="startCol" minWidth="111.0" prefWidth="111.0" text="Start:" />
+            <TableColumn fx:id="endCol" minWidth="111.0" prefWidth="111.0" text="End:" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="weekPicker" layoutX="702.0" layoutY="53.0" />
+      <Label layoutX="639.0" layoutY="27.0" text="Pick a date - The following week will be represented" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.CalendarController">
+   <children>
+      <Label layoutX="388.0" layoutY="38.0" text="Calendar - Month:" AnchorPane.topAnchor="38.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="calendarMonthTable" layoutX="70.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" minWidth="111.0" prefWidth="111.0" text="ID:" />
+          <TableColumn fx:id="customerIdCol" minWidth="111.0" prefWidth="111.0" text="Customer ID:" />
+            <TableColumn fx:id="titleCol" minWidth="111.0" prefWidth="111.0" text="Title:" />
+            <TableColumn fx:id="descriptionCol" minWidth="111.0" prefWidth="111.0" text="Description:" />
+            <TableColumn fx:id="locationCol" minWidth="111.0" prefWidth="111.0" text="Location:" />
+            <TableColumn fx:id="contactCol" minWidth="111.0" prefWidth="111.0" text="Contact:" />
+            <TableColumn fx:id="urlCol" minWidth="111.0" prefWidth="111.0" text="URL:" />
+            <TableColumn fx:id="startCol" minWidth="111.0" prefWidth="111.0" text="Start:" />
+            <TableColumn fx:id="endCol" minWidth="111.0" prefWidth="111.0" text="End:" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="monthBox" layoutX="661.0" layoutY="43.0" prefWidth="150.0" />
+      <Label layoutX="685.0" layoutY="14.0" text="Select a Month:" />
+   </children>
+</AnchorPane>

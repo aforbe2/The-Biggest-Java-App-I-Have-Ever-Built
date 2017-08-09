@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.MainMenuController">
+   <children>
+      <TableView fx:id="customerTable" layoutX="400.0" layoutY="250.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+        <columns>
+          <TableColumn fx:id="customerIdCol" prefWidth="100.0" text="Customer ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="175.0" text="Customer Name" />
+            <TableColumn fx:id="phoneNumberCol" prefWidth="150.0" text="Phone Number" />
+            <TableColumn fx:id="streetAddressCol" prefWidth="250.0" text="Street Address" />
+            <TableColumn fx:id="cityCol" prefWidth="150.0" text="City" />
+            <TableColumn fx:id="addressIdCol" prefWidth="75.0" text="AddressId" />
+            <TableColumn fx:id="zipCodeCol" prefWidth="100.0" text="Zip Code" />
+        </columns>
+      </TableView>
+      <HBox layoutX="123.0" layoutY="13.0" prefHeight="31.0" prefWidth="678.0" spacing="15.0" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="13.0">
+         <children>
+            <Button fx:id="appointmentsBtn" layoutX="109.0" layoutY="14.0" mnemonicParsing="false" onAction="#apptButtonListener" text="New Appointment" />
+            <Button fx:id="appointmentTableBtn" mnemonicParsing="false" onAction="#appointmentTableListener" text="Appointment Table" />
+            <Button fx:id="reportsBtn" layoutX="246.0" layoutY="14.0" mnemonicParsing="false" onAction="#reportButtonListener" text="Reports" />
+            <Button fx:id="calendarBtn" layoutX="325.0" layoutY="14.0" mnemonicParsing="false" onAction="#CalendarButtonListener" text="Calendar/Month" />
+            <Button fx:id="calendarWkBtn" mnemonicParsing="false" onAction="#CalendarWeekButtonListener" prefHeight="31.0" prefWidth="128.0" text="Calendar/Week" />
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="648.0" spacing="15.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+         <children>
+            <Button fx:id="newBtn" layoutX="14.0" layoutY="648.0" mnemonicParsing="false" onAction="#newButtonListener" text="New Customer" />
+            <Button fx:id="editBtn" layoutX="92.0" layoutY="648.0" mnemonicParsing="false" onAction="#editButtonListener" text="Edit Customer" />
+         </children>
+      </HBox>
+      <Label layoutX="15.0" layoutY="20.0" text="Customer" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

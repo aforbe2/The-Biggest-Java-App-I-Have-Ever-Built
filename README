@@ -1,0 +1,109 @@
+
+Here is a quick overview of the instruction items and where they can be found in my project.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE 2 (newest): Here are a list of comments from my most recent returned submission and information on what I did to fix the concerns raised by the grader.
+
+GRADER COMMENT: 5/20/17 - The application provides a screen to add a new customer. Saving a customer throws the SQL exception: "SQL syntax error; check the manual that corresponds 
+to your MySQL server version for the right syntax to use near ' 1, UTC_TIMESTAMP(), "test", UTC_TIMESTAMP(), "test")" . The exception block is blank so although the exception above 
+is thrown, it is caught but no feedback is given to the user; see the NewEditFormController class line 300.
+
+WHAT I DID TO FIX THIS ISSUE: This problem was caused by a number of update statements that weren't acquiring IDs correctly. I had this fixed in a previous version of the code, I
+was under the impression that I had tested this functionality, but I had missed it in my testing and it had been overwritten in the version of the code that I submitted. To fix this
+I updated the statements that were causing the problems and I exported the final build of my application that I will be submitting, and then wrote out a testing checklist to make sure
+that my final build was thoroughly tested. In addition to that I added print statements to the empty catch blocks to avoid future confusion.
+
+GRADER COMMENT: 5/20/17 - The fields on the "Add or Edit customer records" screen are not aligned with the labels making entry confusing.
+
+WHAT I DID TO FIX THIS ISSUE: I have determined that this is an issue with different versions of Scene Builder. The alignment of the labels and text fields render properly on my
+computer. The form was rendering incorrectly on my teacher's machine as well. She has a different version of Scene Builder installed on her machine. I've determined that if I compile
+my application in to an executable JAR file from my machine, the resulting application renders this form properly, even on other computers. I've included a screenshot of the program
+running on my machine, and the form rendering correctly.
+ 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE: Here are a list of comments from my returned submission and information on what I did to fix the concerns raised by the grader.
+
+GRADER COMMENT: 5/9/17 - The submission allows the user to add new customers to the database. Some fields don't accurately insert. For example, the address is always 
+set to 111 Unreal St. no matter what the user places in the fields, on initial insert. Also, there is a popup that asks for the city even when data is in the textbox. 
+Also, when the customer is updated the application creates a second record so that the database holds records for the same customer.
+
+WHAT I DID TO FIX THIS ISSUE: This problem was caused by some incorrect SQL inserts that were left over from a previous test version of the code. I had ID numbers hard coded instead
+of having them increment automatically. I now have the ID number incrementing automatically which has fixed the duplicate record issue, as well as the incorrect inserts. I also 
+removed the pop-ups that asked the user to confirm the city and country.
+
+GRADER COMMENT: 5/9/17 - The submission includes a grid that displayed the appointments. The display needs to change based on the user's time zone.
+
+WHAT I DID TO FIX THIS ISSUE: I had the code to implement this feature already, but after some more testing I found that I didn't have it hooked up with the table properly.
+I've added to the time conversion code in AppointmentsController.java starting on line 69. In addition to that, I added time conversion code to EditAppointmentFormController.java
+starting on line 128 to ensure that the timezones are correct after an appointment is edited. Lastly I've added time conversion code to LogInController.java starting on line 167
+so that the alerts for an upcoming appointment are registering in the correct timezone.
+
+GRADER COMMENT: 5/9/17 - The submission includes a GUI based java application. The application opens a large amount of repeat windows when the user works with the data. 
+Having all these repeated windows makes it difficult for the user to follow where they are supposed to be working.
+
+WHAT I DID TO FIX THIS ISSUE: I added code to close whatever table is showing, apart from the main menu, whenever I pull up any kind of a new or edit form. Once an edit form is 
+completed, the application will re-launch the table that it's acting on and the updated information will be reflected in the table. This ensures that there are no duplicate windows up. 
+An example of this can be found in EditAppointmentFormController.java on line 106. Similar code is implemented anywhere there is a new form or edit form. In addition to that I've added
+to some of the labels in the application for increased clarity, for example, in the customer table/ main menu, I've changed the button that says "New" to say "New Customer". I 
+thought this would make it easier for the user to understand how to use the application. I've made several similar changes around the application to make it more user friendly.   
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+A. In LogInController.java you can find a method called langSelect starting on line 115 that implements localization and internationalization concepts that allow the user 
+to choose one of three languages and translates the log-in prompt in to the selected language. Three properties files are present representing one of the three languages each. 
+In addition to that, alternative targets are provided for unsuccessful login messages for all three languages and are printed to the login form upon an unsuccessful login attempt.
+
+
+B. The main menu contains a table that displays customers from the database. You can click the new or edit buttons at the bottom of the window which will open the new/edit form. 
+The new button will open a blank form for adding a new customer. If you click the edit button the program will prompt you to choose a customer from the table to edit. Once you've 
+chosen a customer to edit from the table, the form will populate and you can change any of the fields other than the customer ID. Once you hit the submit button on either form, 
+the changes will be made in the database and will be reflected in the customer table in the application. You can find the code for this functionality in MainMenuController.java 
+and NewEditFormController.java
+
+
+C. An example of a lambda expression used for appointment gathering can be found in CalendarWeekController.java starting on line 73. The types of appointments and links to specific 
+customers via customer ID are gathered from the user based on the customer the user clicks on before clicking on the New Appointment button in the main menu/customer table. 
+The appointment type and customer ID can be viewed in the appointment table section of the application.
+
+
+D. There is both a monthly calendar and a weekly calendar accessible via buttons in the main menu/customer table. If you visit the monthly calendar you will be prompted to pick a 
+month from a dropdown box and a table will be populated with all of the appointments that have been scheduled for that month. If you visit the weekly calendar you can pick a date 
+via a date picker dropdown, and a table will be populated with any appointments scheduled for that date, as well as all the appointments scheduled throughout the following seven days.
+
+
+E. Time handling code for timezones and daylight savings time can be found in AppointmentsController.java starting on line 69 as well as in EditAppointmentFormController.java 
+starting on line 128 and in LogInController.java starting on line 167.
+
+
+F. Time handling code for conflicting appointments can be found in Appointments.java starting on line 48. Additionally, error handling code for missing or invalid customer 
+information can be found in NewEditFormController.java starting on line 118. 
+
+
+G. An example of a lambda being used to pop up an alert message can be found in LogInController.java on line 212.
+
+
+H. Code for appointment reminders can be found in LogInController.java starting on line 151 in an inner class called Alarm.
+
+
+I. Each of the three requested reports are available by clicking on the reports button in the main menu/customer table. Once the reports button is clicked a scene with the name of 
+each report and a button labeled "view report" will come up.
+
+
+    I - The number of appointment types by month report will prompt you to pick a month from a dropdown menu, and a table will be populated with each report type and the number of 
+        them that exist for that month. Additionally I've chosen to use a dropdown menu in the new appointment form for when the user decides what type of appointment to make. I've 
+        provided a finite amount of options for different appointment types to keep things clean and concise. The code for this report can be found in TypeByMonthReportController.java 
+    
+
+    II - The consultant schedule report will detect who is logged in and will populate a table with all of the appointments that consultant is scheduled for. The code for this can 
+         be found in ConsultantScheduleReportController.java. In ConsultantScheduleReportController.java on line 70 the report will grab the user name of whomever is logged in and 
+         pull appointments for that user. I've chosen to use the contact field in appointments to maintain users that the customer may be working with, this allows me to grab users 
+         for this report and display all of their appointments.
+    
+
+    III - The third report that I chose is a list of users. This information isn't visable anywhere else in the application and I thought it would be useful for users to be able to 
+          see what other employees have access to the application. Code for this report can be found in EmployeeRosterReportController.java
+    
+
+J. The code for tracking user activity by recording timestamps for user log-ins to a .txt file can be found in LogInController.java starting on line 130.
