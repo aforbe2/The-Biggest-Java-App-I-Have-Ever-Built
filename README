@@ -1,9 +1,5 @@
 IMPORTANT NOTE:
 
-This app was my final project for my final class in my degree program. During the construction of this app I was given a pre-built
-relational database that I used to populate the application and maintain user log-in information. That database no longer exists. I'm
-currently working on building a new database and hooking it back up to the application.
+This app was my final project for my final class in my degree program. During the construction of this app I was given a pre-built relational database that I used to populate the application and maintain user log-in information. That database no longer exists. I'm currently working on building a new database and hooking it back up to the application.
 
-I chose to make this repository public anyway so that any potential employers or collaborators can take a look at my code to get a feel 
-for my style and level of proficiency. There are several technologies and object oriented concepts on display in this application including:
-JDBC, Threading and Concurrency, Lambdas, etc.
+I chose to make this repository public anyway so that any potential employers or collaborators can take a look at my code to get a feel for my style and level of proficiency. There are several technologies and object oriented concepts on display in this application including: JDBC, Threading and Concurrency, Lambdas, etc.
